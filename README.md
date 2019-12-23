@@ -1,33 +1,33 @@
-# specsful-demo-ru
-Описание демопроекта *Bank Application* в Specsful
+# Specsful Demo Project
+Specsful *Bank Application* Demo Project Description
 
-## 1) экраны и состояния экранов приложения
+## 1) Application screens and screens states
 
-В Specsful можно хранить экраны приложения и их части, фрагменты (не имеет отношения к фрагментам Андроид). Экраны и фрагменты могут иметь состояния.
+In Specsful, you can store application screens and their parts, fragments (not related to Android fragments). Screens and fragments may have states.
 
-### Пример для экрана приложения:
+### Application screen example:
 
-Экран [Список операций](https://app.specsful.io/project/1/screen/9) помимо [основного состояния](https://app.specsful.io/project/1/screen/9) имеет [состояние загрузки](https://app.specsful.io/project/1/screen/9/state/10).
+In addition to the [main state](https://app.specsful.io/project/1/screen/9), the [List of Operations](https://app.specsful.io/project/1/screen/9) screen has a [loading state](https://app.specsful.io/project/1/screen/9/state/10).
 
-### Для фрагмента экрана:
+### Screen fragment example:
 
-Фрагмент [Элемент списка счетов](https://app.specsful.io/project/1/screen/28) имеет состояния:
+Fragment [Element of accounts list](https://app.specsful.io/project/1/screen/28) has the following states:
 
-* [с картой](https://app.specsful.io/project/1/screen/28/state/30)
-* [накопительный счет](https://app.specsful.io/project/1/screen/28/state/31)
+* [with the card](https://app.specsful.io/project/1/screen/28/state/30)
+* [savings account](https://app.specsful.io/project/1/screen/28/state/31)
 
-## 2) структуры данных приложения в связке с элементами на экране
+## 2) Application data structures in conjunction with elements on the screen
 
-Фрагмент [Элемент списка счетов](https://app.specsful.io/project/1/screen/28) использует модель данных [`BankProduct`](https://app.specsful.io/project/1/model/33). Для отображения баланса на фрагменте используются данные из этой модели по пути: `balance / value`. Также на фрагменте прописано откуда брать все остальные видимые элементы.
+Fragment [Element of accounts list](https://app.specsful.io/project/1/screen/28) uses [`BankProduct`](https://app.specsful.io/project/1/model/33) data model. To display the balance on the fragment, data from this model is used along the path: `balance / value`. Also, the fragment says where to get all the other visible elements.
 
-## 3) работу приложения с сетью и формат передаваемых данных
+## 3) The operation of the application with the network and the format of the transmitted data
 
-[Экран авторизации](https://app.specsful.io/project/1/screen/2) работает с сетевым запросом [Login]( https://app.specsful.io/project/1/request/56) передавая ему модель `LoginRequest`. Поле ввода номера телефона на экране связано со значением `phoneNumber` модели `LoginRequest`. 
+[The authorization](https://app.specsful.io/project/1/screen/2) screen works with the network [Login]( https://app.specsful.io/project/1/request/56) request passing the `LoginRequest` model to it. The phone number input field on the screen is associated with the `phoneNumber` value of the `LoginRequest` model. 
 
-## 4) параметры для написания автоматических тестов приложения
+## 4) Options for writing automated application tests
 
-В демо проекте у каждого элемента на экране прописан ID. Например, на экране авторизации у поля номер телефона ID: `phoneNumber`. Это id для разметки (часто XML) элементов. По этим id можно писать автотесты для приложения. Если id разметки прописать в документации до создания экранов приложения, они будут одинаковые для обоих платформ, что позволит сильно сократить труд при написании автотестов.
+In the demo project, each element on the screen has an ID. For example, on the [authorization](https://app.specsful.io/project/1/screen/2) screen near the field, the phone number is ID: `phoneNumber`. This is the id for markup (often XML) elements. Using these ID, you can write autotests for the application. If the markup ID is written in the documentation before creating the application screens, they will be the same for all platforms of application, which will greatly reduce the scope of work when writing autotests.
 
-## 5) локализации
+## 5) Localization texts
 
-Если приложение пишется на нескольких языках, то также как поле модели данных на экране можно прописать ключ локализации и его значения для различных языков. Например на [экране авторизации](https://app.specsful.io/project/1/screen/2) текст «_Подтвердите ваш номер телефона_» привязан к ключу [`PHONE_CONFIRMATION_LABEL`](https://app.specsful.io/project/1/text/PHONE_CONFIRMATION_LABEL), который имеет значение на нескольких языках.
+If the application is written in several languages, then just like the data model field on the screen, you can register the localization key and its values for different languages. For example, on the [authorization](https://app.specsful.io/project/1/screen/2) screen, the text «_Confirm your phone number_» attached to the key [`PHONE_CONFIRMATION_LABEL`](https://app.specsful.io/project/1/text/PHONE_CONFIRMATION_LABEL), which has a meaning in several languages.
