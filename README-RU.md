@@ -1,4 +1,4 @@
-# specsful-demo-ru
+# Демопроект Specsful
 Описание демопроекта *Bank Application* в Specsful
 
 ## 1) экраны и состояния экранов приложения
