@@ -1,5 +1,5 @@
 # Specsful Demo Project
-Specsful [*Bank Application*](https://app.specsful.io/project/141) Demo Project Description
+Specsful [*Bank Application*](https://app.specsful.io/project/141) Demo Project description
 
 ## 1) Application screens and screens states
 
@@ -14,7 +14,7 @@ In addition to the [main state](https://app.specsful.io/project/141/screen/144),
 Fragment [Element of accounts list](https://app.specsful.io/project/141/screen/146) has the following states:
 
 * [Card Account](https://app.specsful.io/project/141/screen/146/state/147)
-* [savings Account](https://app.specsful.io/project/141/screen/146/state/148)
+* [Savings Account](https://app.specsful.io/project/141/screen/146/state/148)
 
 ## 2) Application data structures in conjunction with elements on the screen
 
